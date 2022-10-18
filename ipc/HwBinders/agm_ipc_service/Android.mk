@@ -1,4 +1,6 @@
 LOCAL_PATH := $(call my-dir)
+
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE        := vendor.qti.hardware.AGMIPC@1.0-impl
@@ -21,6 +23,8 @@ LOCAL_SHARED_LIBRARIES := \
     libagm
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
 
 include $(CLEAR_VARS)
 
