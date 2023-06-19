@@ -4,6 +4,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libagmclient
 LOCAL_MODULE_OWNER := qti
 LOCAL_VENDOR_MODULE := true
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-format
 
 LOCAL_SRC_FILES := \
     src/agm_client_wrapper.cpp\
